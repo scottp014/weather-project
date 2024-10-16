@@ -105,7 +105,6 @@ const renderCurrentConditions = (currentConditions) => {
 
 const renderFiveDayForecast = (fiveDayForecast) => {
   document.querySelector('.five-day-forecast').replaceChildren();
-  console.log(fiveDayForecast)
 
   for (let i = 0; i < fiveDayForecast.length; i++) {
     let fiveDay = fiveDayForecast[i];
@@ -116,35 +115,35 @@ const renderFiveDayForecast = (fiveDayForecast) => {
 
     const template = `
     <div class='row'>
-      <div class='forecast1 col-sm'>
+      <div class='forecast col-sm'>
         <h4>${fiveDay.weather1}</h4>
         <h4>${Math.floor(fiveDay.temp1)}°</h4>
         <img src='https://openweathermap.org/img/wn/${fiveDay.weatherIcon1}@2x.png' alt=${fiveDay.weather1}>
         <h5>${dayNames[day + 1]}</h5>
       </div>
 
-      <div class='forecast2 col-sm'>
+      <div class='forecast col-sm'>
       <h4>${fiveDay.weather2}</h4>
         <h4>${Math.floor(fiveDay.temp2)}°</h4>
         <img src='https://openweathermap.org/img/wn/${fiveDay.weatherIcon2}@2x.png' alt=${fiveDay.weather2}>
         <h5>${dayNames[day + 2]}</h5>
       </div>
 
-      <div class='forecast3 col-sm'>
+      <div class='forecast col-sm'>
       <h4>${fiveDay.weather3}</h4>
         <h4>${Math.floor(fiveDay.temp3)}°</h4>
         <img src='https://openweathermap.org/img/wn/${fiveDay.weatherIcon3}@2x.png' alt=${fiveDay.weather3}>
         <h5>${dayNames[day + 3]}</h5>
       </div>
 
-      <div class='forecast4 col-sm'>
+      <div class='forecast col-sm'>
       <h4>${fiveDay.weather4}</h4>
         <h4>${Math.floor(fiveDay.temp4)}°</h4>
         <img src='https://openweathermap.org/img/wn/${fiveDay.weatherIcon4}@2x.png' alt=${fiveDay.weather4}>
         <h5>${dayNames[day + 4]}</h5>
       </div>
 
-      <div class='forecast5 col-sm'>
+      <div class='forecast col-sm'>
       <h4>${fiveDay.weather5}</h4>
         <h4>${Math.floor(fiveDay.temp5)}°</h4>
         <img src='https://openweathermap.org/img/wn/${fiveDay.weatherIcon5}@2x.png' alt=${fiveDay.weather5}>
